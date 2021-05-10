@@ -41,10 +41,54 @@ public class ATM extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        LabelNama.setFont(new java.awt.Font("Serif", 0, 20)); // NOI18N
+        LabelNama.setForeground(java.awt.Color.black);
+        LabelNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNama.setText("TUBES ATM KELOMPOK 9");
+
+        buttonCheck.setText("Cek Saldo");
+        buttonCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCheckActionPerformed(evt);
+            }
+        });
+
+        LabelMenu.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        LabelMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelMenu.setText("MENU");
+
+        buttonSave.setText("Simpan");
+        buttonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSaveActionPerformed(evt);
+            }
+        });
+
+        buttonTransfer.setText("Transfer");
+        buttonTransfer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTransferActionPerformed(evt);
+            }
+        });
+
+        buttonWithdraw.setText("Ambil");
+        buttonWithdraw.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonWithdrawActionPerformed(evt);
+            }
+        });
+
         buttonExit.setText("Keluar");
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonExitActionPerformed(evt);
+            }
+        });
+
+        buttonClear.setText("Clear");
+        buttonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonClearActionPerformed(evt);
             }
         });
 
@@ -161,6 +205,31 @@ public class ATM extends javax.swing.JFrame {
 
     private void buttonClearActionPerformed(java.awt.event.ActionEvent evt) {
         textTampilan.setText("");
+    }
+
+    public static void main(String args[]) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ATM().setVisible(true);
+            }
+        });
     }
     
     private javax.swing.JButton buttonWithdraw;
