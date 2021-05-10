@@ -1,5 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package atm;
 import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author feronika
+ */
 
 public class ATM extends javax.swing.JFrame {
 
@@ -71,13 +82,6 @@ public class ATM extends javax.swing.JFrame {
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnKeluarActionPerformed(evt);
-            }
-        });
-
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
             }
         });
 
@@ -177,23 +181,6 @@ public class ATM extends javax.swing.JFrame {
         answer = String.format(" %,.2f ", hasil);
         jtxtTampilan2.setText(answer);
         JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+ saldo+ "\n"+ "Berhasil transfer kepada "+nama3+"sebesar :"+ masukan);
-    }
-
-    private void btnAmbilActionPerformed(java.awt.event.ActionEvent evt) {
-        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukan angka : "));
-        hasil = saldo - masukan;
-        saldo=hasil;
-        answer = String.format(" %,.2f ", hasil);
-        jtxtTampilan2.setText(answer);
-        JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+ saldo+ "\n");
-    }
-
-    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {
-        dispose();
-    }
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {
-        jtxtTampilan2.setText("");
     }
 
     public static void main(String args[]) {
