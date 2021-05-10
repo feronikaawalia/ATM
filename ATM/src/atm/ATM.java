@@ -1,5 +1,16 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package atm;
 import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author feronika
+ */
 
 public class ATM extends javax.swing.JFrame {
 
@@ -13,75 +24,75 @@ public class ATM extends javax.swing.JFrame {
     }
 
     public ATM(int saldo) {
-        this.saldo =saldo;
+        this.saldo = saldo;
     }
     
     private void initComponents() {
-        jLabel4 = new javax.swing.JLabel();
-        btnCekSaldo = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        btnSimpan = new javax.swing.JButton();
-        btnTransfer = new javax.swing.JButton();
-        btnAmbil = new javax.swing.JButton();
-        btnKeluar = new javax.swing.JButton();
-        jtxtTampilan2 = new javax.swing.JTextField();
-        btnClear = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        LabelNama = new javax.swing.JLabel();
+        buttonCheck = new javax.swing.JButton();
+        LabelMenu = new javax.swing.JLabel();
+        buttonSave = new javax.swing.JButton();
+        buttonTransfer = new javax.swing.JButton();
+        buttonWithdraw = new javax.swing.JButton();
+        buttonExit = new javax.swing.JButton();
+        textTampilan = new javax.swing.JTextField();
+        buttonClear = new javax.swing.JButton();
+        LabelKeterangan = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel4.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
-        jLabel4.setForeground(java.awt.Color.black);
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("TUBES ATM KELOMPOK 9");
+        LabelNama.setFont(new java.awt.Font("Serif", 0, 20)); // NOI18N
+        LabelNama.setForeground(java.awt.Color.black);
+        LabelNama.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelNama.setText("TUBES ATM KELOMPOK 9");
 
-        btnCekSaldo.setText("Cek Saldo");
-        btnCekSaldo.addActionListener(new java.awt.event.ActionListener() {
+        buttonCheck.setText("Cek Saldo");
+        buttonCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCekSaldoActionPerformed(evt);
+                buttonCheckActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("menu");
+        LabelMenu.setFont(new java.awt.Font("Noto Sans", 0, 15)); // NOI18N
+        LabelMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        LabelMenu.setText("MENU");
 
-        btnSimpan.setText("Simpan");
-        btnSimpan.addActionListener(new java.awt.event.ActionListener() {
+        buttonSave.setText("Simpan");
+        buttonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSimpanActionPerformed(evt);
+                buttonSaveActionPerformed(evt);
             }
         });
 
-        btnTransfer.setText("Transfer");
-        btnTransfer.addActionListener(new java.awt.event.ActionListener() {
+        buttonTransfer.setText("Transfer");
+        buttonTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTransferActionPerformed(evt);
+                buttonTransferActionPerformed(evt);
             }
         });
 
-        btnAmbil.setText("Ambil");
-        btnAmbil.addActionListener(new java.awt.event.ActionListener() {
+        buttonWithdraw.setText("Ambil");
+        buttonWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAmbilActionPerformed(evt);
+                buttonWithdrawActionPerformed(evt);
             }
         });
 
-        btnKeluar.setText("Keluar");
-        btnKeluar.addActionListener(new java.awt.event.ActionListener() {
+        buttonExit.setText("Keluar");
+        buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKeluarActionPerformed(evt);
+                buttonExitActionPerformed(evt);
             }
         });
 
-        btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
+        buttonClear.setText("Clear");
+        buttonClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
+                buttonClearActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Saldo anda saat ini adalah :");
+        LabelKeterangan.setText("Saldo anda saat ini :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,80 +103,80 @@ public class ATM extends javax.swing.JFrame {
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(109, 109, 109)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(LabelNama, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createSequentialGroup()
-                                                .addGap(36, 36, 36)
+                                                .addGap(50, 50, 50)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(btnKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(LabelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addGroup(layout.createSequentialGroup()
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(btnTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(btnAmbil, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(btnCekSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                        .addComponent(buttonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(buttonTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(buttonWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(buttonCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addGap(70, 70, 70)
                                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jtxtTampilan2)
-                                                                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))))))
-                                .addContainerGap(77, Short.MAX_VALUE))
+                                                                        .addComponent(buttonClear, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(textTampilan)
+                                                                        .addComponent(LabelKeterangan, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))))))
+                                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel4)
+                                .addComponent(LabelNama)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(btnCekSaldo)
-                                        .addComponent(jLabel1))
+                                .addComponent(LabelMenu)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(btnSimpan)
-                                        .addComponent(jtxtTampilan2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(buttonCheck)
+                                        .addComponent(LabelKeterangan))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(buttonSave)
+                                        .addComponent(textTampilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnTransfer)
+                                                .addComponent(buttonTransfer)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(btnAmbil))
+                                                .addComponent(buttonWithdraw))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGap(21, 21, 21)
-                                                .addComponent(btnClear)))
+                                                .addComponent(buttonClear)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnKeluar)
-                                .addContainerGap(133, Short.MAX_VALUE))
+                                .addComponent(buttonExit)
+                                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
     }
 
-    private void btnCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(rootPane, "Saldo Anda Saat Ini adalah :"+ saldo);
+    private void buttonCheckActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(rootPane, "Saldo anda saat ini adalah "+ saldo);
         hasil = saldo;
         saldo=hasil;
         answer = String.format(" %,.2f ",saldo);
-        jtxtTampilan2.setText(answer);
+        textTampilan.setText(answer);
     }
 
-    private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {
-        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukan angka : "));
-        JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+ (saldo + masukan));
+    private void buttonSaveActionPerformed(java.awt.event.ActionEvent evt) {
+        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukkan nominal : "));
+        JOptionPane.showMessageDialog(rootPane,"Saldo anda saat ini adalah "+ (saldo + masukan));
         hasil = saldo + masukan;
         saldo=hasil;
         answer = String.format(" %,.2f ",saldo);
-        jtxtTampilan2.setText(answer);
+        textTampilan.setText(answer);
     }
 
-    private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {
-        String nama3=JOptionPane.showInputDialog("Silahkan Masukan Nama ");
+    private void buttonTransferActionPerformed(java.awt.event.ActionEvent evt) {
+        String nama=JOptionPane.showInputDialog("Masukkan Nama : ");
 
-        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukan angka : "));
+        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukkan Nominal : "));
         if (saldo <= masukan) {
-            JOptionPane.showMessageDialog(rootPane,"Maaf Saldo anda kurang !!!!!");
+            JOptionPane.showMessageDialog(rootPane,"Maaf Saldo Tidak Cukup !!!!!");
             JOptionPane.showConfirmDialog(null, " Apakah ingin lanjut");
             JOptionPane.showMessageDialog(rootPane,"Tambahkan Saldo Rekening Anda Terlebih Dahulu");
             System.exit(0);
@@ -175,28 +186,45 @@ public class ATM extends javax.swing.JFrame {
         hasil = saldo - masukan;
         saldo=hasil;
         answer = String.format(" %,.2f ", hasil);
-        jtxtTampilan2.setText(answer);
-        JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+ saldo+ "\n"+ "Berhasil transfer kepada "+nama3+"sebesar :"+ masukan);
+        textTampilan.setText(answer);
+        JOptionPane.showMessageDialog(rootPane,"Saldo anda saat ini adalah "+ saldo+ "\n"+ "Berhasil transfer kepada "+nama+" sebesar "+ masukan);
     }
 
-    private void btnAmbilActionPerformed(java.awt.event.ActionEvent evt) {
-        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukan angka : "));
+    private void buttonWithdrawActionPerformed(java.awt.event.ActionEvent evt) {
+        masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukkan nominal : "));
         hasil = saldo - masukan;
         saldo=hasil;
         answer = String.format(" %,.2f ", hasil);
-        jtxtTampilan2.setText(answer);
-        JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+ saldo+ "\n");
+        textTampilan.setText(answer);
+        JOptionPane.showMessageDialog(rootPane,"Saldo anda saat ini adalah "+ saldo+ "\n");
     }
 
-    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {
+    private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {
         dispose();
     }
 
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {
-        jtxtTampilan2.setText("");
+    private void buttonClearActionPerformed(java.awt.event.ActionEvent evt) {
+        textTampilan.setText("");
     }
 
     public static void main(String args[]) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ATM.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ATM().setVisible(true);
@@ -204,15 +232,15 @@ public class ATM extends javax.swing.JFrame {
         });
     }
     
-    private javax.swing.JButton btnAmbil;
-    private javax.swing.JButton btnCekSaldo;
-    private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnKeluar;
-    private javax.swing.JButton btnSimpan;
-    private javax.swing.JButton btnTransfer;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jtxtTampilan2;
+    private javax.swing.JButton buttonWithdraw;
+    private javax.swing.JButton buttonCheck;
+    private javax.swing.JButton buttonClear;
+    private javax.swing.JButton buttonExit;
+    private javax.swing.JButton buttonSave;
+    private javax.swing.JButton buttonTransfer;
+    private javax.swing.JLabel LabelNama;
+    private javax.swing.JLabel LabelMenu;
+    private javax.swing.JLabel LabelKeterangan;
+    private javax.swing.JTextField textTampilan;
     
 }
